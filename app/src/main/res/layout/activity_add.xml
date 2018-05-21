@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvNewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/new_plant_name"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etNewName"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/etNewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter name here"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/tvNewSpecies" />
+
+    <TextView
+        android:id="@+id/tvNewSpecies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/new_plant_species"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etNewSpecies"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/etNewSpecies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter species here"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/etNewName"
+        app:layout_constraintStart_toEndOf="@+id/tvNewSpecies" />
+
+    <View
+        android:id="@+id/horizontalLine1"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginVertical="10dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnLastWatering"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNewSpecies" />
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+        android:id="@+id/tvLastWatering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Date for last watering:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnLastWatering"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/btnLastWatering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginVertical="10dp"
+        android:text="Pick date"
+        app:layout_constraintStart_toEndOf="@+id/tvLastWatering"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLine1" />
+
+    <TextView
+        android:id="@+id/tvChosenDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/btnLastWatering" />
+
+    <TextView
+        android:id="@+id/tvCycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Watering cycle:"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etCycle"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+
+    <View
+        android:id="@+id/horizontalLine2"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginVertical="10dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCycle" />
+
+    <EditText
+        android:id="@+id/etCycle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvCycle"
+        app:layout_constraintTop_toBottomOf="@+id/tvChosenDate" />
+
+    <Button
+        android:id="@+id/btnAddDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Add plant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
